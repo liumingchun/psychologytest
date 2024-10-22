@@ -1,0 +1,352 @@
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --accent-color: #0071e3;
+    --background-color: #f5f5f7;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.site-title {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.search-container {
+    display: flex;
+}
+
+#search-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+#search-button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.banner {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+.dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+aside {
+    width: 25%;
+    padding-right: 2rem;
+}
+
+.follow-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+#categories {
+    list-style-type: none;
+    padding: 0;
+}
+
+#categories li {
+    margin-bottom: 1rem;
+}
+
+#categories a {
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+#categories a:hover,
+#categories a:focus {
+    color: var(--accent-color);
+}
+
+#categories i {
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+.image-gallery {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height:300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery-item .title {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.gallery-item .description {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.gallery-item .likes {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.gallery-item .likes i {
+    color: red;
+    margin-right: 0.25rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+.disclaimer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    text-align: left;
+    max-width: 800px;
+}
+
+.disclaimer h4 {
+    margin-bottom: 0.5rem;
+}
+
+.disclaimer p {
+    margin: 0.25rem 0;
+}
+
+/* 心理学量表页面样式 */
+.scales-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.scales-content section {
+    margin-bottom: 3rem;
+}
+
+.scales-content h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.scales-content h3 {
+    color: var(--accent-color);
+    margin-top: 1.5rem;
+}
+
+.scales-content ul {
+    padding-left: 2rem;
+}
+
+.scales-content li {
+    margin-bottom: 0.5rem;
+}
+
+.scale-types {
+    display: flex;
+    flex-direction: column;
+}
+
+.scale-type {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 问卷页面样式 */
+.questionnaire-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+        display: block;
+}
+
+.questionnaire-content h1 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    height: 4rem;
+    width: 15rem;
+
+}
+
+/* 添加更多问卷相关的样式... */
+
+
+.questionnaire-content iframe {
+            width: 100%; /* 自适应宽度 */
+            height: 500px; /* 高度 */
+            border: none; /* 去除边框 */
+            border-radius: 8px; /* 圆角 */
+        }
+
